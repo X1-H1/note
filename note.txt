@@ -1,0 +1,5 @@
+1.使用PHPExcel导出时，单元格内容过多需要换行可通过：
+a.单列：$excel->getActiveSheet()->getRowDimension(1)->setRowHeight(-1); 
+b.所有列：foreach($xls->getActiveSheet()->getRowDimensions() as $rd) { 
+            $rd->setRowHeight(-1); 
+          } 
